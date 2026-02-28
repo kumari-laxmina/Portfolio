@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
+      <h1 class="text-2xl font-bold text-blue-600">MyPortfolio</h1>
+      <ul class="hidden md:flex space-x-6 font-semibold">
+        <li><a href="#about" class="hover:text-blue-600">About</a></li>
+        <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
+        <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="h-screen flex flex-col justify-center items-center bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center">
+    <h2 class="text-5xl font-bold mb-4">Hi, I'm laxmina </h2>
+    <p class="text-lg mb-6">A Web Developer passionate about IoT & AI</p>
+    <button onclick="scrollToSection('projects')" class="bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-200">
+      View My Work
+    </button>
+  </section>
+
+  <section id="about" class="max-w-4xl mx-auto p-10">
+    <h2 class="text-3xl font-bold mb-4 text-blue-600">About Me</h2>
+    <p class="text-lg leading-relaxed">
+      I am a student developer with skills in HTML, CSS, JavaScript, and IoT systems. 
+      I love building responsive websites and experimenting with new technologies.
+    </p>
+  </section>
+
+  <section id="projects" class="bg-white p-10">
+    <h2 class="text-3xl font-bold mb-6 text-blue-600 text-center">Projects</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="p-6 border rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="font-bold text-xl mb-2">Portfolio Website</h3>
+        <p>Built with HTML5 and Tailwind CSS, hosted on GitHub Pages.</p>
+      </div>
+      <div class="p-6 border rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="font-bold text-xl mb-2">IoT Healthcare Monitoring</h3>
+        <p>Real-time patient monitoring using MQTT protocol.</p>
+      </div>
+      <div class="p-6 border rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="font-bold text-xl mb-2">Event Landing Page</h3>
+        <p>Responsive college event page with Tailwind CSS.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="p-10 bg-gray-100 text-center">
+    <h2 class="text-3xl font-bold mb-4 text-blue-600">Contact Me</h2>
+    <form class="space-y-4 max-w-md mx-auto">
+      <input type="text" placeholder="Your Name" class="w-full p-2 border rounded">
+      <input type="email" placeholder="Your Email" class="w-full p-2 border rounded">
+      <textarea placeholder="Your Message" class="w-full p-2 border rounded"></textarea>
+      <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">Send</button>
+    </form>
+  </section>
+
+  <footer class="bg-gray-800 text-white text-center p-4">
+    <p>&copy; 2026 All rights reserved.</p>
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
